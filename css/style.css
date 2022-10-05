@@ -21,6 +21,7 @@ body {
 .col2 {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .col2>* {
@@ -51,26 +52,40 @@ body {
   position: relative;
   color: #fff;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.banner {}
-
-.banner__inner {}
 
 .banner__title {
   margin-bottom: 40px;
   text-align: center;
+  font-size: clamp(1.5rem, 3vw + 0.75rem, 3rem);
 }
 
+.banner__wrapper {
+  flex-grow: 1;
+  align-items: center;
+}
 
 .banner__img {
+  object-fit: contain;
+  max-width: 100%;
+  height: auto;
   display: block;
-  height: 100%;
-
+  max-height: 600px;
 }
 
 .banner__info {}
 
-.banner__list {}
+.banner__list {
+  font-size:
+    clamp(1.5rem, 2vw + 1rem, 2rem);
+}
+
+.banner__list li {
+  margin-bottom: 20px;
+}
 
 .banner__btn {}
